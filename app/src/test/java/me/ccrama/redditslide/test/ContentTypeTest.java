@@ -154,5 +154,6 @@ public class ContentTypeTest {
     @Test
     public void detectsNone() {
         assertThat(ContentType.getContentType(""), is(Type.NONE));
+        assertThat(ContentType.getContentType((String)null), is(Type.NONE));
     }
 }

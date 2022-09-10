@@ -134,6 +134,10 @@ public class ContentType {
      * @return ContentType of the URL
      */
     public static Type getContentType(String url) {
+        if (url == null) {
+            return Type.NONE;
+        }
+
         if (!url.startsWith("//") && ((url.startsWith("/") && url.length() < 4) || url.startsWith(
                 "#spoiler") || url.startsWith("/spoiler") || url.startsWith("#s-") || url.equals(
                 "#s") || url.equals("#ln") || url.equals("#b") || url.equals("#sp"))) {

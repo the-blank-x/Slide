@@ -354,7 +354,8 @@ public class SubmissionCache {
         }*/
         if (SettingValues.showDomain) {
             titleString.append(spacer);
-            titleString.append(submission.getDomain());
+            String domain = submission.getDomain();
+            titleString.append(domain != null ? domain : "self." + subname);
         }
 
         if (SettingValues.typeInfoLine) {
